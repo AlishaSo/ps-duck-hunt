@@ -34,9 +34,19 @@ window.onload = function () {
     // HINT: Use Math.random() * window.innerWidth    for "left"
     //       And Math.random() * window.innerHeight   for "top"
     const moveDuck = duckDiv => {
-      const [left, top] = randomPosition();
-      duckDiv.style.left = left + 'px';
-      duckDiv.style.top = top + 'px';
+      const [x, y] = randomPosition();
+      duckDiv.style.left = x + 'px';
+      duckDiv.style.top = y + 'px';
+
+      // 14. BONUS: Add the "left" and "right" class to the duck based on the direction the duck is flying and change the way the duck is facing
+      if(x < (window.innerWidth / 2)) {
+        duckDiv.classList.add('right')
+        duckDiv.classList.remove('left')
+      }
+      else {
+        duckDiv.classList.add('left')
+        duckDiv.classList.remove('right')
+      }
     }
 
     // 4. Try making the duck move to a different location every second (what did we use to do this several lines up??)
@@ -74,9 +84,6 @@ window.onload = function () {
 
   // 13. BONUS: The ducks are moving pretty erratically, can you think
   //     of a way to adjust the ducks speed based on how far needs to move?
-
-  // 14. BONUS: Add the "left" and "right" class to the duck based on the
-  //     direction the duck is flying and change the way the duck is facing
 
   // Done, you have accomplish another level of skill
 };
