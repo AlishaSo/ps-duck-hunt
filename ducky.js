@@ -37,6 +37,9 @@ window.onload = function () {
 
   // 7. Now, let's create lots of ducks!  Use a "for" loop to create 5 ducks
   //    using our fancy new createDuck() function
+  for(let i = 0; i < 5; i++) {
+    createDuck();
+  }
 
   // 8. The ducks are overlapping.  Modify createDuck so each time
   //     it creates a duck, it appears in a random location
