@@ -45,7 +45,15 @@ window.onload = function () {
     }, 1000);
 
     // 10. BOOM. Attach a "click" handler that adds the "shot" class to the duck when you click on it!
-    newDuckDiv.addEventListener('click', e => e.currentTarget.classList.add('shot'));
+    newDuckDiv.addEventListener('click', () => {
+      newDuckDiv.classList.add('shot');
+    
+      // 11. After a duck has been clicked on, remove it from the DOM after a short delay (1 second) 
+      //Hint Hint...use setTimeout; as for removing the element check out https://dzone.com/articles/removing-element-plain
+      setTimeout(() => {
+        newDuckDiv.remove();
+      }, 1000);
+    });  
   }
 
   // 7. Now, let's create lots of ducks!  Use a "for" loop to create 5 ducks
@@ -55,10 +63,6 @@ window.onload = function () {
   }
 
   // --------------------------- PART 3 ------------------------------------
-  
-  // 11. After a duck has been clicked on, remove it from the DOM after
-  //     a short delay (1 second) Hint Hint...use setTimeout
-  //     as for removing the element check out https://dzone.com/articles/removing-element-plain
 
   // 12. Create a new function named checkForWinner() that reads the DOM
   //     to see if there are any ducks left. (How can we check the DOM for more than one element?, and how can we see how many elements we get back) If not, alert "YOU WIN!"
