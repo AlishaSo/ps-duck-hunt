@@ -13,6 +13,9 @@ window.onload = function () {
 
   // 2. Next, use setInterval to toggle the "flap" class on the duck every 250 ms (1/4 second)
   // https://www.w3schools.com/jsref/met_win_setinterval.asp
+  setInterval(() => {
+    newDuckDiv.classList.toggle('flap');
+  }, 250);
 
   // 3. Now, let's move the duck using CSS "top" and "left". Create
   // a function `moveDuck` that takes a duck object as an argument and sets the
