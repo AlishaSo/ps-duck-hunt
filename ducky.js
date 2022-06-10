@@ -21,12 +21,22 @@ window.onload = function () {
       newDuckDiv.classList.toggle('flap');
     }, 250);
 
+    // 8. The ducks are overlapping.  Modify createDuck so each time it creates a duck, it appears in a random location
+    // HINT: You may want to create a `randomPosition()` function that you can use to set the ducks' initial locations and in your `moveDuck()` function;
+    const randomPosition = () => {
+      let x = Math.floor(Math.random() * (window.innerWidth + 1));
+      let y = Math.floor(Math.random() * (window.innerHeight + 1));
+
+      return [x, y];
+    }
+
     // 3. Now, let's move the duck using CSS "top" and "left". Create a function `moveDuck` that takes a duck object as an argument and sets the "top" and "left" CSS properties.
     // HINT: Use Math.random() * window.innerWidth    for "left"
     //       And Math.random() * window.innerHeight   for "top"
     const moveDuck = duckDiv => {
-      duckDiv.style.left = Math.random() * window.innerWidth;
-      duckDiv.style.top = Math.random() * window.innerHeight;
+      const [left, top] = randomPosition();
+      duckDiv.style.left = left + 'px';
+      duckDiv.style.top = top + 'px';
     }
 
     // 4. Try making the duck move to a different location every second (what did we use to do this several lines up??)
@@ -40,11 +50,6 @@ window.onload = function () {
   for(let i = 0; i < 5; i++) {
     createDuck();
   }
-
-  // 8. The ducks are overlapping.  Modify createDuck so each time
-  //     it creates a duck, it appears in a random location
-  // HINT: You may want to create a `randomPosition()` function that you can use
-  //       to set the ducks' initial locations and in your `moveDuck()` function;
 
   // 9. Keep going! Move onto part 3!
 
