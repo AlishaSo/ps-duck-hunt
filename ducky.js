@@ -11,7 +11,7 @@ window.onload = function () {
     // ( 1. create the element
     const newDuckDiv = document.createElement('div');
     //   2. add a class to the element
-    newDuckDiv.classList.add = 'duck';
+    newDuckDiv.classList.add('duck');
     //   3. append the element to the body )
     document.body.appendChild(newDuckDiv);
 
