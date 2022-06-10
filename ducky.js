@@ -5,8 +5,11 @@ window.onload = function () {
 
   // 1. Create a <div> with the class "duck" and add it to the body.  Do this step by step
   // ( 1. create the element
+  const newDuckDiv = document.createElement('div');
   //   2. add a class to the element
+  newDuckDiv.classList.add = 'duck';
   //   3. append the element to the body )
+  document.body.appendChild(newDuckDiv);
 
   // 2. Next, use setInterval to toggle the "flap" class on the duck every 250 ms (1/4 second)
   // https://www.w3schools.com/jsref/met_win_setinterval.asp
