@@ -22,6 +22,10 @@ window.onload = function () {
   // "top" and "left" CSS properties.
   // HINT: Use Math.random() * window.innerWidth    for "left"
   //       And Math.random() * window.innerHeight   for "top"
+  const moveDuck = duckObj => {
+    duckObj['left'] = Math.random() * window.innerWidth;
+    duckObj['top'] = Math.random() * window.innerHeight;
+  }
 
   // 4. Try making the duck move to a different location every second (what did we use to do this several lines up??)
 
