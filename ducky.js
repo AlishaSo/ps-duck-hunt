@@ -52,20 +52,25 @@ window.onload = function () {
       //Hint Hint...use setTimeout; as for removing the element check out https://dzone.com/articles/removing-element-plain
       setTimeout(() => {
         newDuckDiv.remove();
+        checkForWinner();
       }, 1000);
     });  
   }
 
-  // 7. Now, let's create lots of ducks!  Use a "for" loop to create 5 ducks
-  //    using our fancy new createDuck() function
+  // 7. Now, let's create lots of ducks!  Use a "for" loop to create 5 ducks using our fancy new createDuck() function
   for(let i = 0; i < 5; i++) {
     createDuck();
   }
 
   // --------------------------- PART 3 ------------------------------------
 
-  // 12. Create a new function named checkForWinner() that reads the DOM
-  //     to see if there are any ducks left. (How can we check the DOM for more than one element?, and how can we see how many elements we get back) If not, alert "YOU WIN!"
+  // 12. Create a new function named checkForWinner() that reads the DOM to see if there are any ducks left. (How can we check the DOM for more than one element?, and how can we see how many elements we get back) If not, alert "YOU WIN!"
+  const checkForWinner = () => {
+    const numOfDucks = document.querySelectorAll('.duck').length;
+  
+    if(numOfDucks == 0)
+      alert('YOU WIN! 🎉');
+  }
 
   // 13. BONUS: The ducks are moving pretty erratically, can you think
   //     of a way to adjust the ducks speed based on how far needs to move?
