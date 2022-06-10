@@ -43,6 +43,9 @@ window.onload = function () {
     setInterval(() => {
       moveDuck(newDuckDiv);
     }, 1000);
+
+    // 10. BOOM. Attach a "click" handler that adds the "shot" class to the duck when you click on it!
+    newDuckDiv.addEventListener('click', e => e.currentTarget.classList.add('shot'));
   }
 
   // 7. Now, let's create lots of ducks!  Use a "for" loop to create 5 ducks
@@ -51,24 +54,19 @@ window.onload = function () {
     createDuck();
   }
 
-  // 9. Keep going! Move onto part 3!
-
   // --------------------------- PART 3 ------------------------------------
-
-  // 11. BOOM. Attach a "click" handler that adds the "shot" class to
-  //     the duck when you click on it!
-
-  // 12. After a duck has been clicked on, remove it from the DOM after
+  
+  // 11. After a duck has been clicked on, remove it from the DOM after
   //     a short delay (1 second) Hint Hint...use setTimeout
   //     as for removing the element check out https://dzone.com/articles/removing-element-plain
 
-  // 13. Create a new function named checkForWinner() that reads the DOM
+  // 12. Create a new function named checkForWinner() that reads the DOM
   //     to see if there are any ducks left. (How can we check the DOM for more than one element?, and how can we see how many elements we get back) If not, alert "YOU WIN!"
 
-  // 14. BONUS: The ducks are moving pretty erratically, can you think
+  // 13. BONUS: The ducks are moving pretty erratically, can you think
   //     of a way to adjust the ducks speed based on how far needs to move?
 
-  // 15. BONUS: Add the "left" and "right" class to the duck based on the
+  // 14. BONUS: Add the "left" and "right" class to the duck based on the
   //     direction the duck is flying and change the way the duck is facing
 
   // Done, you have accomplish another level of skill
