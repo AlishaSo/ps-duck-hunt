@@ -39,7 +39,7 @@ window.onload = function () {
       duckDiv.style.top = y + 'px';
 
       // 14. BONUS: Add the "left" and "right" class to the duck based on the direction the duck is flying and change the way the duck is facing
-      if(x < (window.innerWidth / 2)) {
+      if(x > (window.innerWidth / 2)) {
         duckDiv.classList.add('right')
         duckDiv.classList.remove('left')
       }
